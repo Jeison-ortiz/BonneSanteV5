@@ -8,7 +8,7 @@
     <string name="contrasena">Contraseña</string>
     <string name="repetir_contrasena">Repetir Contraseña</string>
     <string name="enviar">Enviar</string>
-    <string name="respuesta">Nombre: %s \nCorreo: %s \nTelefono: %s \nGenero: %s \nPasatiempos: %s \nCiudad de nacimiento: %s \nDia de nacimiento: %s</string>
+    <string name="respuesta">Nombre: %s \nCorreo: %s \nTelefono: %s \nGenero: %s \nPasatiempos: %s \nTipo de Dieta: %s \nDia de nacimiento: %s</string>
     <string name="masculino">Masculino</string>
     <string name="femenino">Femenino</string>
     <string name="genero">Genero</string>
@@ -21,14 +21,21 @@
     <string name="dia_de_nacimiento">Día de nacimiento</string>
     <string name="fecha">Fecha</string>
     <string name="registrar">Registrar</string>
+    <string name="diet_type">Tipo de Dieta</string>
+    <string name="Altura">altura</string>
+    <string name="peso">"Peso "</string>
+    <string name="correo_electronico_login">Correo Electronico</string>
+    <string name="contrasena_login">Contraseña</string>
+    <string name="piramide">piramide</string>
 
-    <string-array name="ciudades_nacimiento">
-        <item> Seleccione una ciudad</item>
-        <item> Madrid</item>
-        <item> Amsterdam</item>
-        <item> Sidney</item>
-        <item> Bruselas</item>
-        <item> Munich</item>
+
+    <string-array name="tipos_dieta">
+        <item> Seleccione dieta</item>
+        <item> Vegana</item>
+        <item> Vegetariana</item>
+        <item> Intolerante Lactosa</item>
+        <item> Bajo en Carnes</item>
+
     </string-array>
 
 </resources>

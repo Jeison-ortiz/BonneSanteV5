@@ -53,36 +53,24 @@ class RegistroActivity : AppCompatActivity() {
             val contrasena= contrasena_edit_text.text.toString()
             val repcontrasena= repetircontra_edit_text.text.toString()
             var genero = if (masculino_radiobutton.isChecked) getString(R.string.masculino) else getString(R.string.femenino)
+            val peso_usuario= valor_peso_edit_text.toString()
+            val altura_usuario=  valor_altura_edit_text.toString()
 
-            var pasatiempos = EMPTY
-            if (gym_checkbox.isChecked) pasatiempos += getString(R.string.gym) + SPACE
-            if (comer_checkbox.isChecked) pasatiempos += getString(R.string.comer) + SPACE
-            if (estudiar_checkbox.isChecked) pasatiempos += getString(R.string.study) + SPACE
-            if (series_checkbox.isChecked) pasatiempos += getString(R.string.series)
 
-            val ciudadNacimiento = ciudades_nacimiento.selectedItem
+            val dieta = tipos_dieta.selectedItem
 
              if ( contrasena == "" && repcontrasena =="" || contrasena != repcontrasena){
-            textView3.text = "Contraseñas no coinciden, vuleva a intentar // Passwords don't match, please check "
+            textView3.text = "Contraseñas no coinciden, vuelva a intentar (deben tener al menos 6 digitos)// Passwords don't match, please check (the password needs at least 6 characters) "
               }
-             else if (contrasena == repcontrasena ) {
-                textView3.text = getString(
-                    R.string.respuesta,
-                    nombre,
-                    correo,
-                    telefono,
-                    genero,
-                    pasatiempos,
-                    ciudadNacimiento,
-                    datedenaissance
-                )
+             else if (contrasena == repcontrasena && contrasena.length >= 6 ) {
+                 val intent = Intent(this, LogInActivity2::class.java )
+                 intent.putExtra("correo",correo)
+                 intent.putExtra("contraseña",contrasena)
+                 startActivity(intent)
+                 finish()
               }
 
-            val intent = Intent(this, LogInActivity2::class.java )
-            intent.putExtra("correo",correo)
-            intent.putExtra("contraseña",contrasena)
-            startActivity(intent)
-            finish() 
+
 
 
         }

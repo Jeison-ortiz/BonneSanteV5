@@ -9,7 +9,7 @@
     <string name="contrasena">Password</string>
     <string name="repetir_contrasena">Confirm Password</string>
     <string name="enviar">Submit</string>
-    <string name="respuesta">Name: %s \nEmail: %s \nPhone: %s \nGender: %s \nHobbies: %s \nCity of Birth: %s \nBirthday: %s </string>
+    <string name="respuesta">Name: %s \nEmail: %s \nPhone: %s \nGender: %s \nHobbies: %s \nType of Diet: %s \nBirthday: %s </string>
     <string name="masculino">Male</string>
     <string name="femenino">Female</string>
     <string name="genero">Gender</string>
@@ -22,14 +22,21 @@
     <string name="dia_de_nacimiento">Birthday</string>
     <string name="fecha">Date</string>
     <string name="registrar">Register</string>
+    <string name="diet_type">Diet Type</string>
+    <string name="Altura">Height</string>
+    <string name="peso">Weight</string>
+    <string name="correo_electronico_login">Email</string>
+    <string name="contrasena_login">Password</string>
+    <string name="piramide">piramide</string>
 
-    <string-array name="ciudades_nacimiento">
-        <item> Choose a city</item>
-        <item> Madrid</item>
-        <item> Amsterdam</item>
-        <item> Sidney</item>
-        <item> Brussels</item>
-        <item> Munich</item>
+
+    <string-array name="tipos_dieta">
+        <item> Select a Diet</item>
+        <item> Vegan</item>
+        <item> Vegetarian</item>
+        <item> Lactose Intolerant</item>
+        <item> Low in Meat</item>
+
     </string-array>
 
 </resources>
