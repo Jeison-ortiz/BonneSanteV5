@@ -27,6 +27,9 @@
     <string name="correo_electronico_login">Correo Electronico</string>
     <string name="contrasena_login">Contraseña</string>
     <string name="piramide">piramide</string>
+    <string name="sesion">Iniciar Sesión</string>
+    <string name="cerrar_sesion">Cerrar Sesion</string>
+    <string name="bonne_sante">BonneSante</string>
 
 
     <string-array name="tipos_dieta">

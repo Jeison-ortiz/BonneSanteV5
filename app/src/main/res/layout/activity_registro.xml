@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#C4CFD5"
+        android:background="#EDEDED"
         android:textAlignment="center"
         tools:context=".RegistroActivity">
 
@@ -237,27 +237,31 @@
             android:layout_height="35dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:autofillHints=""
             android:ems="5"
             android:inputType="number|numberDecimal"
             android:textAlignment="inherit"
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pasa_textview"
-            android:autofillHints="" />
+            tools:ignore="LabelFor" />
 
         <EditText
             android:id="@+id/valor_peso_edit_text"
             android:layout_width="79dp"
             android:layout_height="35dp"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:autofillHints=""
             android:ems="5"
-            android:inputType="textPersonName"
+            android:inputType="numberSigned|number"
+            android:textAlignment="center"
+            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.52"
             app:layout_constraintStart_toEndOf="@+id/valor_altura_edit_text"
             app:layout_constraintTop_toBottomOf="@+id/peso_text_view"
-            android:autofillHints="" />
+            tools:ignore="LabelFor" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,9 +24,9 @@ class RegistroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
 
-        var datosrecibidos= intent.extras
+        val datosrecibidos= intent.extras
         val numeroEnviado= datosrecibidos?.getInt("numero")
-        Toast.makeText(this, "El numero enviado es $numeroEnviado", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "El numero enviado es $numeroEnviado", Toast.LENGTH_SHORT).show()
 
         val c = Calendar.getInstance()
         val year = c.get(Calendar.YEAR)
@@ -59,13 +59,13 @@ class RegistroActivity : AppCompatActivity() {
 
             val dieta = tipos_dieta.selectedItem
 
-             if ( contrasena == "" && repcontrasena =="" || contrasena != repcontrasena){
-            textView3.text = "Contraseñas no coinciden, vuelva a intentar (deben tener al menos 6 digitos)// Passwords don't match, please check (the password needs at least 6 characters) "
+             if ( contrasena == "" && repcontrasena == "" || contrasena != repcontrasena || contrasena.length < 6 ){
+            textView3.setText("Contraseñas no coinciden, vuelva a intentar (deben tener al menos 6 digitos)// Passwords don't match, please check (the password needs at least 6 characters) ")
               }
              else if (contrasena == repcontrasena && contrasena.length >= 6 ) {
                  val intent = Intent(this, LogInActivity2::class.java )
                  intent.putExtra("correo",correo)
-                 intent.putExtra("contraseña",contrasena)
+                 intent.putExtra("contrasena",contrasena)
                  startActivity(intent)
                  finish()
               }

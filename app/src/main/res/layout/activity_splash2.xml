@@ -4,17 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#409F98"
+    android:background="#EDEDED"
     tools:context=".SplashActivity2">
 
     <ImageView
-        android:id="@+id/imageView_splash"
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#EDEDED"
+        android:contentDescription="@string/piramide"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/mis_deudores"
-        tools:ignore="ContentDescription" />
+        app:srcCompat="@drawable/muscle_pyramid" />
 </androidx.constraintlayout.widget.ConstraintLayout>
