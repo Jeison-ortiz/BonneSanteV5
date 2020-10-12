@@ -48,5 +48,14 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val intent = Intent(this, LogInActivity2::class.java )
+        intent.putExtra("correo",ex)
+        intent.putExtra("contrasena",cx)
+        startActivity(intent)
+        finish()
+    }
+
 
 }
