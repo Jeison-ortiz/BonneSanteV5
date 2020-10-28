@@ -9,18 +9,22 @@
         android:roundIcon="@mipmap/balanza_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LogInActivity2" />
         <activity
-            android:name=".SplashActivity2"
+            android:name=".Drawer.DrawerActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name=".Main.MainActivity" />
+        <activity android:name=".Login.LogInActivity2" />
+        <activity
+            android:name=".Splash.SplashActivity2"
             android:theme="@style/NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistroActivity" />
+        <activity android:name=".Registro.RegistroActivity" />
     </application>
 
 </manifest>

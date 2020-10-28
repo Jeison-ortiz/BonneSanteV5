@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_alimentos">
+    <fragment
+        android:id="@+id/nav_alimentos"
+        android:name="com.alejoestrada.misdeudores.Alimentos.nav_alimentos"
+        android:label="@string/alimentos"
+        tools:layout="@layout/fragment_alimentos" />
+    <fragment
+        android:id="@+id/nav_dieta"
+        android:name="com.alejoestrada.misdeudores.Dieta.nav_dieta"
+        android:label="@string/dieta"
+        tools:layout="@layout/fragment_dieta" />
+    <fragment
+        android:id="@+id/nav_restaurante"
+        android:name="com.alejoestrada.misdeudores.Restaurantes.nav_restaurantes"
+        android:label="@string/restaurantes"
+        tools:layout="@layout/fragment_restaurante" />
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.alejoestrada.misdeudores.Perfil.nav_perfil"
+        android:label="@string/perfil_2"
+        tools:layout="@layout/fragment_perfil" />
+    <fragment
+        android:id="@+id/nav_recetas"
+        android:name="com.alejoestrada.misdeudores.Recetas.nav_recetas"
+        android:label="@string/recetas"
+        tools:layout="@layout/fragment_recetas" />
+    <fragment
+        android:id="@+id/nav_imc"
+        android:name="com.alejoestrada.misdeudores.IMC.nav_imc"
+        android:label="@string/imc"
+        tools:layout="@layout/fragment_i_m_c" />
+</navigation>

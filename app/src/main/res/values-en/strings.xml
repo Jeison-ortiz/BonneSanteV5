@@ -42,4 +42,37 @@
 
     </string-array>
 
+
+    <string name="nav_header_title">AlejoEstradaM</string>
+    <string name="nav_header_subtitle">alejandro.estradam@udea.edu.co</string>
+    <string name="alimentos">Food</string>
+    <string name="dieta">Diet</string>
+    <string name="imc">IMC</string>
+    <string name="restaurantes">Restaurants</string>
+    <string name="recetas">Recipes</string>
+    <string name="perfil_2">Profile</string>
+    <string name="aviso_salida"> Back press two times for exit</string>
+    <string name="lunes">M</string>
+    <string name="martes">T</string>
+    <string name="miercoles">W</string>
+    <string name="jueves">TH</string>
+    <string name="cambio_dieta">Cambiar Dieta</string>
+    <string name="modificar">Modificar Dieta Actual</string>
+    <string name="dieta_texto">Aqui se pretende manejar lo relacionado con la dieta personal de cada usuario, se visualizara con todas las comidas del dia, en la parte inferior se pretende establecer un radiom button que permita seleccionar el dia especifico que quiero chequear, finalmete abran dos opciones, que son cambiar de tipo de dieta y modificar dieta actual</string>
+    <string name="text_resto">Aqui se pretende generar un esquema como el anterior donde, se puedan dar opciones de diferentes tipos de restaurantes para las diferentes dietas disponibles</string>
+    <string name="food_text">Se pretende en esta seccion tener un menu tab en donde se puede deslizar a la derecha o izquierda y a su vez pueda acceder al banco de alimentos de la base de datos y en la otra seccion a la seride alimentos que la persona selecciono quiere que esten en sus tablas de nutricion diaria</string>
+    <string name="profile_text">"En esta seccion, se pretende tener una imagen aleatoria de perfil, donde el usuario tenga la opcion de cambiarla, habra una seccion para editar datos personales, contraseñas y correo electronico. Finalmente, se creara un botón para cerrar sesión "</string>
+    <string name="recetas_text">"En esta sección se pretende de cierta manera emular la imagen interior donde se recomiendan algunos tipos de recetas que sigan los lineamientos establecidos por lo usuarios "</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="perfil">Profile</string>
+    <string name="imc_texto">En esta sección se pretende generar el índice de masa corporal, siguiendo el esquema de las dos imagenes anteriores. Donde pueda selecionar genero, luego con una barra pueda editar mis datos personales, finalmente en otra vista, se visualizara que IMC corresponde para la persona</string>
+    <string name="tabla_nutricional">tabla</string>
+
 </resources>

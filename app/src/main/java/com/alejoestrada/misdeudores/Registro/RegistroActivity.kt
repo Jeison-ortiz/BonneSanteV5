@@ -1,12 +1,13 @@
-package com.alejoestrada.misdeudores
+package com.alejoestrada.misdeudores.Registro
 
 import android.app.DatePickerDialog
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.DatePicker
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.alejoestrada.misdeudores.Login.LogInActivity2
+import com.alejoestrada.misdeudores.R
 import kotlinx.android.synthetic.main.activity_registro.*
 import java.util.*
 
@@ -48,27 +49,31 @@ class RegistroActivity : AppCompatActivity() {
         registrar_button.setOnClickListener {
 
             val nombre = nombre_edit_view.text.toString()
-            val correo= correo_edit_text.text.toString()
-            val telefono= telefono_edit_text.text.toString()
-            val contrasena= contrasena_edit_text.text.toString()
-            val repcontrasena= repetircontra_edit_text.text.toString()
-            var genero = if (masculino_radiobutton.isChecked) getString(R.string.masculino) else getString(R.string.femenino)
-            val peso_usuario= valor_peso_edit_text.toString()
-            val altura_usuario=  valor_altura_edit_text.toString()
+            val correo = correo_edit_text.text.toString()
+            val telefono = telefono_edit_text.text.toString()
+            val contrasena = contrasena_edit_text.text.toString()
+            val repcontrasena = repetircontra_edit_text.text.toString()
+            var genero =
+                if (masculino_radiobutton.isChecked) getString(R.string.masculino) else getString(
+                    R.string.femenino
+                )
+            val peso_usuario = valor_peso_edit_text.toString()
+            val altura_usuario = valor_altura_edit_text.toString()
 
 
             val dieta = tipos_dieta.selectedItem
 
-             if ( contrasena == "" && repcontrasena == "" || contrasena != repcontrasena || contrasena.length < 6 ){
-            textView3.setText("Contraseñas no coinciden, vuelva a intentar (deben tener al menos 6 digitos)// Passwords don't match, please check (the password needs at least 6 characters) ")
-              }
-             else if (contrasena == repcontrasena && contrasena.length >= 6 ) {
-                 val intent = Intent(this, LogInActivity2::class.java )
-                 intent.putExtra("correo",correo)
-                 intent.putExtra("contrasena",contrasena)
-                 startActivity(intent)
-                 finish()
-              }
+            if (contrasena == "" && repcontrasena == "" || contrasena != repcontrasena || contrasena.length < 6) {
+                textView3.text =
+                    "Contraseñas no coinciden, vuelva a intentar (deben tener al menos 6 digitos)// Passwords don't match, please check (the password needs at least 6 characters) "
+            } else if (contrasena == repcontrasena && contrasena.length >= 6) {
+                val intent = Intent(this, LogInActivity2::class.java)
+                intent.putExtra("correo", correo)
+                intent.putExtra("contrasena", contrasena)
+                intent.putExtra("nombre", nombre)
+                startActivity(intent)
+                finish()
+            }
 
 
 

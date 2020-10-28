@@ -1,8 +1,10 @@
-package com.alejoestrada.misdeudores
+package com.alejoestrada.misdeudores.Splash
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.alejoestrada.misdeudores.Login.LogInActivity2
+import com.alejoestrada.misdeudores.R
 import java.util.*
 import kotlin.concurrent.timerTask
 
