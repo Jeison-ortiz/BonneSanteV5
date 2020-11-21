@@ -30,5 +30,10 @@
             android:id="@+id/nav_perfil"
             android:icon="@drawable/ic_menu_profile"
             android:title="@string/perfil_2" />
+
+        <!-- <item
+            android:id="@+id/cerrar_sesion"
+            android:icon="@drawable/ic_baseline_exit_to_app_24"
+            android:title="@string/perfil_2" />*/? -->
     </group>
 </menu>

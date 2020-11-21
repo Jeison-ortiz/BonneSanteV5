@@ -75,4 +75,5 @@
     <string name="imc_texto">En esta sección se pretende generar el índice de masa corporal, siguiendo el esquema de las dos imagenes anteriores. Donde pueda selecionar genero, luego con una barra pueda editar mis datos personales, finalmente en otra vista, se visualizara que IMC corresponde para la persona</string>
     <string name="tabla_nutricional">tabla</string>
 
+
 </resources>

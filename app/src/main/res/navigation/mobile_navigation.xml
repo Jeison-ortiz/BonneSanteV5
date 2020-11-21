@@ -34,4 +34,5 @@
         android:name="com.alejoestrada.misdeudores.IMC.nav_imc"
         android:label="@string/imc"
         tools:layout="@layout/fragment_i_m_c" />
+
 </navigation>

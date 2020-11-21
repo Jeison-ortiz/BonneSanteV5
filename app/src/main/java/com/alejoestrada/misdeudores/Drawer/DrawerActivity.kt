@@ -2,6 +2,7 @@ package com.alejoestrada.misdeudores.Drawer
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -13,13 +14,22 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.alejoestrada.misdeudores.R
+import com.alejoestrada.misdeudores.data.server.Usuario
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 
 class DrawerActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private var doubleBackToExitPressedOnce = false
+    private lateinit var item: MenuItem
+    //private lateinit var auth: FirebaseAuth
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,8 +53,37 @@ class DrawerActivity : AppCompatActivity() {
         val header = navigationView.getHeaderView(0)
         val name: TextView = header.findViewById(R.id.name_textview)
         val email: TextView = header.findViewById(R.id.correo_drawer)
-        email.text = mail3
-        name.text = nombreR
+
+
+        val user = FirebaseAuth.getInstance().currentUser
+
+        val database = FirebaseDatabase.getInstance()
+        val usuarioRef = database.getReference("usuarios")
+
+        usuarioRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                for (data: DataSnapshot in snapshot.children) {
+                    val usuarioActual = data.getValue(Usuario::class.java)
+                    if (usuarioActual?.id.equals(user?.uid)) {
+                        name.text = usuarioActual?.name
+                        email.text = usuarioActual?.correo
+                    }
+                }
+
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+
+        })
+
+
+
+
+
+
+
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_alimentos,
@@ -55,15 +94,66 @@ class DrawerActivity : AppCompatActivity() {
                 R.id.nav_perfil
             ), drawerLayout
         )
+
+
+
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
 
     }
 
+    private fun profileData() {
+
+    }
+
+
+/*
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.cerrar_sesion -> {
+                val auth = FirebaseAuth.getInstance().signOut()
+                goToLoginActivity()
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+        return true
+    }
+
+    fun goToLoginActivity(){
+        val intent= Intent(this, LogInActivity2::class.java)
+        startActivity(intent)
+        finish()
+    }*/
+    /*
+    val user = FirebaseAuth.getInstance().currentUser
+
+        val database= FirebaseDatabase.getInstance()
+        val usuarioRef= database.getReference("")
+        usuarioRef.addValueEventListener(object: ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                for ( data : DataSnapshot in snapshot.children) {
+                    val usuarioActual = data.getValue(Usuario::class.java)
+                    if (usuarioActual?.id == user?.uid) {
+
+                    }
+                }
+
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+
+        })
+    */
+
+
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+
     }
 
     override fun onBackPressed() {
@@ -75,3 +165,5 @@ class DrawerActivity : AppCompatActivity() {
 
 
 }
+
+

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "410532488727",
+    "firebase_url": "https://bonnesante-14c20.firebaseio.com",
+    "project_id": "bonnesante-14c20",
+    "storage_bucket": "bonnesante-14c20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410532488727:android:1c4030fb3deb57ee1dde52",
+        "android_client_info": {
+          "package_name": "com.alejoestrada.misdeudores"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410532488727-45gcirnsfpk2l027v1g41q70oa0aqagc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp5VRkGHqhFcJOBQSEF5me9svJ6TL5TkU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410532488727-45gcirnsfpk2l027v1g41q70oa0aqagc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
