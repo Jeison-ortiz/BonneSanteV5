@@ -65,7 +65,7 @@ class nav_imc : Fragment() {
                 }
 
             }
-            dietaRef.addValueEventListener(postlistener)
+            dietaRef.addListenerForSingleValueEvent(postlistener)
             imc_imageButton.isEnabled = true
 
 

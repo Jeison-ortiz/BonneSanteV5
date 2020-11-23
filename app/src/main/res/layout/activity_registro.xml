@@ -100,9 +100,9 @@
         <Button
             android:id="@+id/registrar_button"
             android:layout_width="0dp"
-            android:layout_height="48dp"
+            android:layout_height="40dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="8dp"
             android:background="@color/colorAccent"
             android:text="@string/enviar"
@@ -110,7 +110,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tipos_dieta" />
+            app:layout_constraintTop_toBottomOf="@+id/repetircontra_edit_text" />
 
         <TextView
             android:id="@+id/textView3"
@@ -120,126 +120,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/registrar_button" />
-
-        <RadioGroup
-            android:id="@+id/radioGroup"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/correo_drawer">
-
-            <RadioButton
-                android:id="@+id/masculino_radiobutton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:checked="true"
-                android:text="@string/masculino" />
-
-            <RadioButton
-                android:id="@+id/femenino_radiobutton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/femenino" />
-
-        </RadioGroup>
-
-        <TextView
-            android:id="@+id/correo_drawer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:text="@string/genero"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/repetircontra_edit_text" />
-
-        <TextView
-            android:id="@+id/pasa_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/Altura"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
-        <TextView
-            android:id="@+id/tipo_dieta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/diet_type"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/valor_altura_edit_text" />
-
-        <Spinner
-            android:id="@+id/tipos_dieta"
-            android:layout_width="300dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:entries="@array/tipos_dieta"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tipo_dieta" />
-
-        <TextView
-            android:id="@+id/peso_text_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/peso"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.58"
-            app:layout_constraintStart_toEndOf="@+id/pasa_textview"
-            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
-
-        <EditText
-            android:id="@+id/valor_altura_edit_text"
-            android:layout_width="79dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:autofillHints=""
-            android:ems="5"
-            android:inputType="number|numberDecimal"
-            android:textAlignment="inherit"
-            android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pasa_textview"
-            tools:ignore="LabelFor" />
-
-        <EditText
-            android:id="@+id/valor_peso_edit_text"
-            android:layout_width="79dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:autofillHints=""
-            android:ems="5"
-            android:inputType="numberSigned|number"
-            android:textAlignment="center"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.52"
-            app:layout_constraintStart_toEndOf="@+id/valor_altura_edit_text"
-            app:layout_constraintTop_toBottomOf="@+id/peso_text_view"
-            tools:ignore="LabelFor" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

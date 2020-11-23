@@ -49,15 +49,15 @@ class RegistroActivity : AppCompatActivity() {
             val telefono = telefono_edit_text.text.toString()
             val contrasena = contrasena_edit_text.text.toString()
             val repcontrasena = repetircontra_edit_text.text.toString()
-            var genero =
-                if (masculino_radiobutton.isChecked) getString(R.string.masculino) else getString(
-                    R.string.femenino
-                )
-            val peso_usuario = valor_peso_edit_text.toString()
-            val altura_usuario = valor_altura_edit_text.toString()
+           // var genero =
+           //     if (masculino_radiobutton.isChecked) getString(R.string.masculino) else getString(
+            //        R.string.femenino
+             //   )
+          //  val peso_usuario = valor_peso_edit_text.toString()
+           // val altura_usuario = valor_altura_edit_text.toString()
 
 
-            val dieta = tipos_dieta.selectedItem
+            //val dieta = tipos_dieta.selectedItem
 
             if (contrasena == "" && repcontrasena == "" || contrasena != repcontrasena || contrasena.length < 6) {
                 textView3.text =

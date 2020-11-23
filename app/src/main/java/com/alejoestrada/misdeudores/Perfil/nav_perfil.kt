@@ -49,8 +49,8 @@ class nav_perfil : Fragment() {
                 for (data: DataSnapshot in snapshot.children) {
                     val usuarioActual = data.getValue(Usuario::class.java)
                     if (usuarioActual?.id.equals(user?.uid)) {
-                        nombrePerfil_textView.text = usuarioActual?.name
-                        correoPerfil_textView.text = usuarioActual?.correo
+                        nombrePerfil_textView?.text = usuarioActual?.name
+                        correoPerfil_textView?.text = usuarioActual?.correo
                     }
                 }
 
