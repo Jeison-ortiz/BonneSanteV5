@@ -77,6 +77,9 @@
     <string name="calorias">Calorias</string>
     <string name="alimento">Alimento</string>
     <string name="ciudad">Ciudad</string>
+    <string name="altura_imc">Altura:</string>
+    <string name="peso_imc">Peso:</string>
+    <string name="calcular">Calculo</string>
 
 
 </resources>

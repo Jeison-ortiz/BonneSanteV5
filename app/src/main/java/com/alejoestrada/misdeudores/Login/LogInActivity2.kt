@@ -67,6 +67,10 @@ class LogInActivity2 : AppCompatActivity() {
         finish()
     }
 
+    private fun crearDietaVacia() {
+
+    }
+
 
 }
 

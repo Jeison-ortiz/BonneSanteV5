@@ -1,19 +1,17 @@
 package com.alejoestrada.misdeudores.Registro
 
-import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.DatePicker
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.alejoestrada.misdeudores.Login.LogInActivity2
 import com.alejoestrada.misdeudores.R
+import com.alejoestrada.misdeudores.data.server.Dieta
 import com.alejoestrada.misdeudores.data.server.Usuario
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_registro.*
-import java.util.*
 
 class RegistroActivity : AppCompatActivity() {
 
@@ -40,22 +38,9 @@ class RegistroActivity : AppCompatActivity() {
         val numeroEnviado = datosrecibidos?.getInt("numero")
         //Toast.makeText(this, "El numero enviado es $numeroEnviado", Toast.LENGTH_SHORT).show()
 
-        val c = Calendar.getInstance()
-        val year = c.get(Calendar.YEAR)
-        val month = c.get(Calendar.MONTH)
-        val day = c.get(Calendar.DAY_OF_MONTH)
 
 
-        lafecha_PICKER.setOnClickListener {
-            val dpd= DatePickerDialog(this, DatePickerDialog.OnDateSetListener {view: DatePicker, mYear: Int, mMonth: Int, mDay : Int ->
-                val monthn= mMonth+1
-                datedenaissance =  "" + mDay + "/" + monthn + "/" + mYear
 
-            }, year, month, day)
-            dpd.show()
-
-
-        }
 
         registrar_button.setOnClickListener {
 
@@ -128,6 +113,17 @@ class RegistroActivity : AppCompatActivity() {
         val usuario = Usuario(uid, nombre, correo, telefono)
 
         uid?.let { myUsersReference.child(uid).setValue(usuario) }
+
+        val database2 = FirebaseDatabase.getInstance()
+
+        val myRefDieta = database2.getReference("dieta")
+
+        val dieta = Dieta(uid, "", "", "")
+
+        uid?.let { myRefDieta.child(uid).setValue(dieta) }
+
+
+
         goToLoginActivity()
 
     }
