@@ -72,5 +72,8 @@
     <string name="food_text">Se pretende en esta sección tener un menú tab en donde se pueda deslizar a la derecha o izquierda y a su vez acceder al banco de alimentos de la base de datos y en la otra sección a la serie de alimentos que la persona seleccionó y quiere que este en sus tablas de nutrición diaria</string>
     <string name="profile_text">"En esta sección, se pretende tener una imagen aleatoria de perfil, donde el usuario tenga la opción de cambiarla, habra una sección para editar datos personales, contraseñas y correo electronico. Finalmente, se creara un botón para cerrar sesión "</string>
     <string name="recetas_text">"En esta sección se pretende de cierta manera emular la imagen interior donde se recomiendan algunos tipos de recetas que sigan los lineamientos establecidos por lo usuarios "</string>
+    <string name="calorias">Calorias</string>
+    <string name="alimento">Alimento</string>
+    <string name="ciudad">Ciudad</string>
 
 </resources>

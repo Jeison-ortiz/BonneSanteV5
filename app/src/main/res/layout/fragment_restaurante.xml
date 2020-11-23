@@ -1,44 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Restaurantes.nav_restaurantes">
+    tools:context=".Restaurantes.nav_restaurantes" >
 
-    <ImageView
-        android:id="@+id/menu_resto_imageView4"
-        android:layout_width="237dp"
-        android:layout_height="213dp"
-        android:layout_marginTop="24dp"
-        android:contentDescription="@string/restaurantes"
-        android:src="@drawable/opciones_resto"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/resto_map_imageView5"
-        android:layout_width="136dp"
-        android:layout_height="210dp"
-        android:layout_marginTop="8dp"
-        android:contentDescription="@string/restaurantes"
-        android:src="@drawable/resto_map"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/menu_resto_imageView4" />
-
-    <TextView
-        android:id="@+id/resto_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="5dp"
-        android:text="@string/text_resto"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resto_map_imageView5" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/restaurantes_RecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/restaurante_item" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
