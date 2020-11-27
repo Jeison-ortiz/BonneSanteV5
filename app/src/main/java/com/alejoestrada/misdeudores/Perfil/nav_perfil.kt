@@ -19,7 +19,7 @@ import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.fragment_perfil.*
 
 class nav_perfil : Fragment() {
-
+    val jeison = "el mejor"
     private lateinit var binding: FragmentPerfilBinding
 
 // jeison ortizs
