@@ -65,3 +65,5 @@ class nav_perfil : Fragment() {
 
     companion object
 }
+
+//alejandro estrada
