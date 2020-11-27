@@ -22,7 +22,7 @@ class nav_perfil : Fragment() {
 
     private lateinit var binding: FragmentPerfilBinding
 
-
+// jeison ortizs
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
