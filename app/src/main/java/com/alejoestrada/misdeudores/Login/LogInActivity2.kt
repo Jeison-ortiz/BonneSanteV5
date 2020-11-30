@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.alejoestrada.misdeudores.Drawer.DrawerActivity
 import com.alejoestrada.misdeudores.R
 import com.alejoestrada.misdeudores.Registro.RegistroActivity
+import com.alejoestrada.misdeudores.resetPassword.reset_passsword
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_log_in2.*
 
@@ -34,6 +35,11 @@ class LogInActivity2 : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        forget_password_button.setOnClickListener {
+            val intent = Intent(this, reset_passsword ::class.java)
+            startActivity(intent)
+            //finish()
+        }
     }
 
     private fun loginWithFirebase(correo: String, contrasena: String) {
@@ -49,7 +55,7 @@ class LogInActivity2 : AppCompatActivity() {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "signInWithEmail:failure", task.exception)
                     Toast.makeText(
-                        baseContext, "Authentication failed.",
+                        baseContext, "Fallo en la Autenticación // Autentication Failled",
                         Toast.LENGTH_SHORT
                     ).show()
 
