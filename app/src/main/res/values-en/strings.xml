@@ -90,6 +90,10 @@
     <string name="regresar">Regresar</string>
     <string name="recetas_text_nuevo">"Aqui van las recetas "</string>
     <string name="flexibles">Flexibles</string>
+    <string name="altura_imc">Altura:</string>
+    <string name="peso_imc">Peso:</string>
+    <string name="calcular">Calculo</string>
+    <string name="correp">Correo</string>
 
 
 </resources>

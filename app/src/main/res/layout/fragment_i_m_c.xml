@@ -7,76 +7,130 @@
     tools:context=".IMC.nav_imc">
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
-
-        <TextView
-            android:id="@+id/letreroPeso_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/peso_imc"
-            android:textAlignment="center"
-            android:textSize="24sp" />
-
-        <EditText
-            android:id="@+id/valorPesoIMC_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:autofillHints=""
-            android:hint="@string/peso"
-            android:inputType="number|text"
-            android:textAlignment="center"
-            android:textSize="24sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/letreroAltura_textView"
+        <ImageView
+            android:id="@+id/imageView2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="207dp"
+            android:layout_margin="25dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:text="@string/altura_imc"
-            android:textAlignment="center"
-            android:textSize="24sp" />
+            android:background="#FAFAFA"
+            android:contentDescription="@string/foto_imc"
+            android:padding="20dp"
+            android:paddingTop="0dp"
+            android:src="@drawable/foto_imc" />
 
-        <EditText
-            android:id="@+id/valorAltura_textView"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:autofillHints=""
-            android:hint="@string/Altura"
-            android:inputType="number|text"
-            android:textAlignment="center"
-            android:textSize="24sp" />
-    </LinearLayout>
+            android:gravity="bottom"
+            android:orientation="vertical"
+            android:weightSum="0">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout3">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/letreroPeso_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/peso_imc"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/valuePeso_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/peso"
+                    android:text="@string/peso"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+
+            <SeekBar
+
+                android:id="@+id/peso_seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_weight="1"
+                android:min="0"
+                android:max="250"
+                 />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/letreroAltura_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/altura_imc"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/valueAltura_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Altura"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/altura_seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:min="0"
+            android:max="230"
+            android:radius="8dp"
+            android:shape="rectangle" />
+
 
         <ImageButton
             android:id="@+id/imc_imageButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
             android:layout_weight="1"
             android:contentDescription="@string/calcular"
-            android:src="@drawable/ic_calculate" />
+            android:gravity="center"
+            android:src="@drawable/ic_calculate"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/rtaIMC_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+

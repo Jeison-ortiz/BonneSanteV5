@@ -92,5 +92,7 @@
     <string name="title_activity_vegano_activity">Map</string>
     <string name="recetas_text_nuevo">"Aqui van las recetas "</string>
     <string name="flexibles">Flexibles</string>
+    <string name="foto_imc">foto_imc</string>
+    <string name="correp">Correo</string>
 
 </resources>
