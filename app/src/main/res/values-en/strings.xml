@@ -73,13 +73,23 @@
     <string name="action_settings">Settings</string>
     <string name="perfil">Profile</string>
     <string name="imc_texto">En esta sección se pretende generar el índice de masa corporal, siguiendo el esquema de las dos imagenes anteriores. Donde pueda selecionar genero, luego con una barra pueda editar mis datos personales, finalmente en otra vista, se visualizara que IMC corresponde para la persona</string>
-    <string name="tabla_nutricional">tabla</string>
-    <string name="calorias">Calorias</string>
-    <string name="alimento">Alimento</string>
+    <string name="tabla_nutricional">Table</string>
+    <string name="calorias">Calories</string>
+    <string name="alimento">Food</string>
     <string name="ciudad">Ciudad</string>
-    <string name="altura_imc">Altura:</string>
-    <string name="peso_imc">Peso:</string>
-    <string name="calcular">Calculo</string>
+    <string name="altura_imc">Height:</string>
+    <string name="peso_imc">Weight:</string>
+    <string name="calcular">Measure</string>
+    <string name="olvide_contra">Forgot PassWord</string>
+    <string name="vegan">Vegano</string>
+    <string name="vegetariano">Vegetariano</string>
+    <string name="variado">Variado</string>
+    <string name="restaurantes_variados">Restaurantes Variados</string>
+    <string name="restaurantes_vegano">Restaurantes Veganos</string>
+    <string name="restaurantes_vegetarianos">Restaurantes Vegetarianos</string>
+    <string name="regresar">Regresar</string>
+    <string name="recetas_text_nuevo">"Aqui van las recetas "</string>
+    <string name="flexibles">Flexibles</string>
 
 
 </resources>

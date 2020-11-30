@@ -31,6 +31,7 @@ class SplashActivity2 : AppCompatActivity() {
             }, 2000
 
         )
+
     }
 
     fun goToLoginActivity() {

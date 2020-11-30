@@ -14,25 +14,37 @@
         android:name="com.alejoestrada.misdeudores.Dieta.nav_dieta"
         android:label="@string/dieta"
         tools:layout="@layout/fragment_dieta" />
-    <fragment
+    <!--<fragment
         android:id="@+id/nav_restaurante"
         android:name="com.alejoestrada.misdeudores.Restaurantes.nav_restaurantes"
         android:label="@string/restaurantes"
-        tools:layout="@layout/fragment_restaurante" />
+        tools:layout="@layout/fragment_restaurante" /> -->
+    <fragment
+        android:id="@+id/restaurantes_google_Fragment"
+        android:name="com.alejoestrada.misdeudores.mapas.restaurantes_google_Fragment"
+        android:label="fragment_restaurantes_google_"
+        tools:layout="@layout/fragment_restaurantes_google_" />
+
     <fragment
         android:id="@+id/nav_perfil"
         android:name="com.alejoestrada.misdeudores.Perfil.nav_perfil"
         android:label="@string/perfil_2"
         tools:layout="@layout/fragment_perfil" />
     <fragment
-        android:id="@+id/nav_recetas"
-        android:name="com.alejoestrada.misdeudores.Recetas.nav_recetas"
-        android:label="@string/recetas"
-        tools:layout="@layout/fragment_recetas" />
+        android:id="@+id/nav_alimentos_tab"
+        android:name="com.alejoestrada.misdeudores.AlimentosTab.nav_alimentos_tab"
+        android:label="Alimentos en tab"
+        tools:layout="@layout/fragment_nav_alimentos_tab" />
     <fragment
         android:id="@+id/nav_imc"
         android:name="com.alejoestrada.misdeudores.IMC.nav_imc"
         android:label="@string/imc"
         tools:layout="@layout/fragment_i_m_c" />
+    <fragment
+        android:id="@+id/nav_recetas"
+        android:name="com.alejoestrada.misdeudores.Recetas.nav_recetas"
+        android:label="fragment_nav_recetas"
+        tools:layout="@layout/fragment_nav_recetas" />
+
 
 </navigation>
