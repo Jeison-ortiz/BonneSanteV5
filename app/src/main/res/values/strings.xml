@@ -78,5 +78,7 @@
     <string name="altura_imc">Altura:</string>
     <string name="peso_imc">Peso:</string>
     <string name="calcular">Calculo</string>
+    <string name="foto_imc">foto_imc</string>
+    <string name="correp">Correo</string>
 
 </resources>

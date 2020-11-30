@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="20dp"
     tools:context=".Perfil.nav_perfil">
 
     <ImageView
@@ -14,21 +16,188 @@
         android:contentDescription="@string/perfil"
         android:src="@drawable/fotivo" />
 
-    <TextView
-        android:id="@+id/nombrePerfil_textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:padding="5dp"
-        android:text="@string/nombre" />
+    <LinearLayout
+        android:layout_width="356dp"
+        android:layout_height="47dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/correoPerfil_textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:padding="5dp"
-        android:text="@string/correo_electronico" />
+        <TextView
+            android:id="@+id/name_textView"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="@string/nombre"
+            android:textAlignment="gravity" />
+
+        <TextView
+            android:id="@+id/nombrePerfil_textView"
+            android:layout_width="169dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="@string/nombre"
+            android:textAlignment="gravity" />
+
+        <ImageButton
+            android:id="@+id/editNombre_imageButton"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="3"
+            android:background="#F8FAF7"
+            android:src="@drawable/icono_edit32"
+            android:padding="5dp"
+            android:textAlignment="gravity" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="356dp"
+        android:layout_height="47dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/email_textView"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="@string/correp"
+            android:textAlignment="gravity" />
+
+        <TextView
+            android:id="@+id/correoPerfil_textView"
+            android:layout_width="169dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="@string/correp"
+            android:textAlignment="gravity" />
+
+        <ImageButton
+            android:id="@+id/editCorreo_imageButton"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="3"
+            android:background="#F8FAF7"
+            android:src="@drawable/icono_edit32"
+            android:padding="5dp"
+            android:textAlignment="gravity" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="356dp"
+        android:layout_height="47dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/telefono_textView"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="@string/telefono"
+            android:textAlignment="gravity" />
+
+        <TextView
+            android:id="@+id/telefonoPerfil_textView"
+            android:layout_width="169dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="@string/telefono"
+            android:textAlignment="gravity" />
+
+        <ImageButton
+            android:id="@+id/editTelefono_imageButton"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="3"
+            android:background="#F8FAF7"
+            android:src="@drawable/icono_edit32"
+            android:padding="5dp"
+            android:textAlignment="gravity" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="351dp"
+        android:layout_height="47dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/contasena_textView"
+            android:layout_width="278dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="@string/contrasena"
+            android:textAlignment="gravity" />
+
+        <ImageButton
+            android:id="@+id/editContrasena_imageButton"
+            android:layout_width="77dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20dp"
+            android:layout_weight="3"
+            android:background="#F8FAF7"
+            android:padding="5dp"
+            android:src="@drawable/icono_edit32"
+            android:textAlignment="gravity" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="356dp"
+        android:layout_height="47dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dieta_textView"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="@string/dieta"
+            android:textAlignment="gravity" />
+
+        <TextView
+            android:id="@+id/dietaPerfil_textView"
+            android:layout_width="169dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:text="@string/dieta"
+            android:textAlignment="gravity" />
+
+        <ImageButton
+            android:id="@+id/editDieta_imageButton"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_weight="3"
+            android:background="#F8FAF7"
+            android:src="@drawable/icono_edit32"
+            android:padding="5dp"
+            android:textAlignment="gravity" />
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/cerrar_perfil_button"
