@@ -6,7 +6,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_alimentos"
-            android:icon="@drawable/ic_menu_food"
+            android:icon="@drawable/comiendo"
             android:title="@string/alimentos" />
 
         <item
@@ -19,17 +19,26 @@
             android:icon="@drawable/ic_menu_imc"
             android:title="@string/imc" />
         <item
-            android:id="@+id/nav_restaurante"
+            android:id="@+id/restaurantes_google_Fragment"
             android:icon="@drawable/ic_menu_restaurante"
             android:title="@string/restaurantes" />
         <item
-            android:id="@+id/nav_recetas"
+           android:id="@+id/nav_recetas"
             android:icon="@drawable/ic_baseline_receipt_24"
             android:title="@string/recetas" />
         <item
             android:id="@+id/nav_perfil"
             android:icon="@drawable/ic_menu_profile"
             android:title="@string/perfil_2" />
+        <item
+            android:id="@+id/nav_alimentos_tab"
+            android:icon="@drawable/comiendo"
+            android:title="@string/alimentos" />
+        <!-- <item
+            android:id="@+id/restaurantes_google_Fragment"
+            android:icon="@drawable/ic_baseline_exit_to_app_24"
+            android:title="fav" /> -->
+
 
         <!-- <item
             android:id="@+id/cerrar_sesion"
