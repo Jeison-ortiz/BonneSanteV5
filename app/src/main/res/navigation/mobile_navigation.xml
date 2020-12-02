@@ -21,9 +21,13 @@
         tools:layout="@layout/fragment_restaurante" /> -->
     <fragment
         android:id="@+id/restaurantes_google_Fragment"
-        android:name="com.alejoestrada.misdeudores.mapas.restaurantes_google_Fragment"
-        android:label="fragment_restaurantes_google_"
-        tools:layout="@layout/fragment_restaurantes_google_" />
+        android:name="com.alejoestrada.misdeudores.mapas.RestaurantesGoogleFragment"
+        android:label="@string/restaurantes"
+        tools:layout="@layout/fragment_restaurantes_google_">
+        <action
+            android:id="@+id/action_restaurantes_google_Fragment_to_mapaRestauranteFragment"
+            app:destination="@id/mapaRestauranteFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_perfil"
@@ -45,6 +49,15 @@
         android:name="com.alejoestrada.misdeudores.Recetas.nav_recetas"
         android:label="fragment_nav_recetas"
         tools:layout="@layout/fragment_nav_recetas" />
+    <fragment
+        android:id="@+id/mapaRestauranteFragment"
+        android:name="com.alejoestrada.misdeudores.mapas.MapaRestauranteFragment"
+        android:label="fragment_mapa_restaurante"
+        tools:layout="@layout/fragment_mapa_restaurante" >
+        <argument
+            android:name="tipoRestaurante"
+            app:argType="string" />
+    </fragment>
 
 
 </navigation>

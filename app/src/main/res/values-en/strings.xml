@@ -89,10 +89,12 @@
     <string name="restaurantes_vegetarianos">Restaurantes Vegetarianos</string>
     <string name="regresar">Regresar</string>
     <string name="recetas_text_nuevo">"Aqui van las recetas "</string>
-    <string name="flexibles">Flexibles</string>
-    <string name="altura_imc">Altura:</string>
-    <string name="peso_imc">Peso:</string>
-    <string name="calcular">Calculo</string>
+    <string name="flexibles">Varied</string>
+    <string name="vegetarianos">Vegetarians</string>
+    <string name="veganos">Vegans</string>
+
+
+
     <string name="correp">Correo</string>
 
 

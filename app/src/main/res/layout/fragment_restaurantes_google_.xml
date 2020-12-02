@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:elevation="12sp"
-    tools:context=".mapas.restaurantes_google_Fragment"
+    tools:context=".mapas.RestaurantesGoogleFragment"
     android:accessibilityPaneTitle="@string/restaurantes">
 
     <ImageView
