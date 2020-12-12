@@ -101,6 +101,10 @@ class MapaRestauranteFragment : Fragment() {
         binding= FragmentMapaRestauranteBinding.bind(view)
         val args : MapaRestauranteFragmentArgs by navArgs()
         restauranteSeleccionado = args.tipoRestaurante
+
+
+
+
         if(restauranteSeleccionado == "vegetarianos"){
             (activity as AppCompatActivity).supportActionBar?.title = "Vegetarianos"
         }else if (restauranteSeleccionado == "veganos"){

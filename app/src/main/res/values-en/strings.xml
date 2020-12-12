@@ -96,6 +96,10 @@
 
 
     <string name="correp">Correo</string>
+    <string name="desayuno">Desayunos</string>
+    <string name="almuerzo">Almuerzos</string>
+    <string name="cena">Cenas</string>
+    <string name="ensalada">Ensaladas</string>
 
 
 </resources>

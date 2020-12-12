@@ -97,5 +97,17 @@
     <string name="vegetarianos">Vegetarianos</string>
     <string name="veganos">Veganos</string>
     <string name="flexibles">Flexibles</string>
+    <string name="ingredientes">Ingredientes</string>
+    <string name="preparacion">Preparacion</string>
+    <string name="Recetas">Recetas</string>
+    <string name="desayuno">Desayunos</string>
+    <string name="almuerzo">Almuerzos</string>
+    <string name="cena">Cenas</string>
+    <string name="ensalada">Ensaladas</string>
+    <string name="nombrereceta">" "</string>
+    <string name="Pasos">Pasos</string>
+    <string name="instrucciones">INSTRUCCIONES</string>
+    <string name="ingrediente">INGREDIENTES</string>
+
 
 </resources>

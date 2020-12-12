@@ -47,8 +47,12 @@
     <fragment
         android:id="@+id/nav_recetas"
         android:name="com.alejoestrada.misdeudores.Recetas.nav_recetas"
-        android:label="fragment_nav_recetas"
-        tools:layout="@layout/fragment_nav_recetas" />
+        android:label="@string/Recetas"
+        tools:layout="@layout/fragment_nav_recetas" >
+        <action
+            android:id="@+id/action_nav_recetas_to_listaRecetasFragment"
+            app:destination="@id/listaRecetasFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mapaRestauranteFragment"
         android:name="com.alejoestrada.misdeudores.mapas.MapaRestauranteFragment"
@@ -57,6 +61,27 @@
         <argument
             android:name="tipoRestaurante"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaRecetasFragment"
+        android:name="com.alejoestrada.misdeudores.Recetas.ListaRecetasFragment"
+        android:label="fragment_lista_recetas"
+        tools:layout="@layout/fragment_lista_recetas" >
+        <argument
+            android:name="tipoRecetas"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_listaRecetasFragment_to_ingredientesYPasosFragment"
+            app:destination="@id/ingredientesYPasosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ingredientesYPasosFragment"
+        android:name="com.alejoestrada.misdeudores.Recetas.IngredientesYPasosFragment"
+        android:label="fragment_ingredientes_y_pasos"
+        tools:layout="@layout/fragment_ingredientes_y_pasos" >
+        <argument
+            android:name="IngredientesYpasos"
+            app:argType="com.alejoestrada.misdeudores.data.server.Receta" />
     </fragment>
 
 

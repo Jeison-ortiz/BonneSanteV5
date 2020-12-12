@@ -57,11 +57,9 @@ class nav_alimentos: Fragment() {
         listAlimentos.clear()
 
       //  for (mealDay in lisMeals) {
-
             for (foodMeal in listOfListMeal) {
                 var mealDay = lisMeals.get(i)
                 for (piramide in foodMeal) {
-
                     val postListener_comida = object : ValueEventListener {
                         override fun onDataChange(snapshot: DataSnapshot) {
                             for (comida: DataSnapshot in snapshot.child(mealDay).child(piramide).children) {
