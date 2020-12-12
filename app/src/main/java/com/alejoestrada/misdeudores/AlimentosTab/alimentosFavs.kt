@@ -1,16 +1,18 @@
-package com.alejoestrada.misdeudores
+package com.alejoestrada.misdeudores.AlimentosTab
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-class  Cricket : Fragment() {
+import com.alejoestrada.misdeudores.R
+
+class alimentosFavs : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cricket, container, false)
+        return inflater.inflate(R.layout.fragment_football, container, false)
     }
 }

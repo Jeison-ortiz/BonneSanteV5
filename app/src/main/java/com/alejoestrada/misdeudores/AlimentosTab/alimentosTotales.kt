@@ -1,26 +1,29 @@
-package com.alejoestrada.misdeudores.Alimentos
+package com.alejoestrada.misdeudores.AlimentosTab
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.alejoestrada.misdeudores.Alimentos.AlimentosRVAdapter
 import com.alejoestrada.misdeudores.R
 import com.alejoestrada.misdeudores.data.Alimento
+import com.alejoestrada.misdeudores.databinding.FragmentAlimentosBinding
+import com.alejoestrada.misdeudores.databinding.FragmentAlimentosTotalesBinding
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.alejoestrada.misdeudores.databinding.FragmentAlimentosBinding
 
+class  alimentosTotales : Fragment() , AlimentosRVAdapter.OnItemClickListener{
 
-class nav_alimentos: Fragment() {
 
     private lateinit var binding: FragmentAlimentosBinding
-
     var listAlimentos: MutableList<Alimento> = mutableListOf()
+    var listAlimentos2: MutableList<Alimento> = mutableListOf()
     val lisMeals = listOf("almuerzo","cena","desayuno","merienda")
     val listMealAlmuerzo = listOf("carbohidratos","carnes","frutas","lacteos","variado","vegetales")
     val listMealCena = listOf("carbohidratos","carnes","lacteos","variado","vegetales")
@@ -28,6 +31,8 @@ class nav_alimentos: Fragment() {
     val listMealMerienda = listOf("carbohidratos","frutas","lacteos","variado")
     val listOfListMeal = listOf(listMealAlmuerzo,listMealCena,listMealDesayuno,listMealMerienda)
     private lateinit var alimentosRVAdapter: AlimentosRVAdapter
+
+
 
 
     override fun onCreateView(
@@ -44,10 +49,11 @@ class nav_alimentos: Fragment() {
         binding.alimentosRecyclerView.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
 
         binding.alimentosRecyclerView.setHasFixedSize(true) // para que el tamaño sea constante
-        alimentosRVAdapter = AlimentosRVAdapter(listAlimentos as ArrayList<Alimento>)
+        alimentosRVAdapter = AlimentosRVAdapter(listAlimentos as ArrayList<Alimento>, this@alimentosTotales)
         binding.alimentosRecyclerView.adapter = alimentosRVAdapter
         cargarDesdeFarebase()
-        alimentosRVAdapter.notifyDataSetChanged() // se hace para notificar que cambiaron los datos porque se envio una lista vacia
+        alimentosRVAdapter.notifyDataSetChanged()
+
     }
 
     private fun cargarDesdeFarebase() {
@@ -56,57 +62,44 @@ class nav_alimentos: Fragment() {
         var i = 0
         listAlimentos.clear()
 
-      //  for (mealDay in lisMeals) {
-            for (foodMeal in listOfListMeal) {
-                var mealDay = lisMeals.get(i)
-                for (piramide in foodMeal) {
-                    val postListener_comida = object : ValueEventListener {
-                        override fun onDataChange(snapshot: DataSnapshot) {
-                            for (comida: DataSnapshot in snapshot.child(mealDay).child(piramide).children) {
-                                val alimentosServer: Alimento? = comida.getValue(Alimento::class.java)
-                                alimentosServer?.let { listAlimentos.add(it) }
-                            }
-                            alimentosRVAdapter.notifyDataSetChanged()
+        //  for (mealDay in lisMeals) {
+        for (foodMeal in listOfListMeal) {
+            var mealDay = lisMeals.get(i)
+            for (piramide in foodMeal) {
+                val postListener_comida = object : ValueEventListener {
+                    override fun onDataChange(snapshot: DataSnapshot) {
+                        for (comida: DataSnapshot in snapshot.child(mealDay).child(piramide).children) {
+                            val alimentosServer: Alimento? = comida.getValue(Alimento::class.java)
+                            alimentosServer?.let { listAlimentos.add(it) }
                         }
-
-                        override fun onCancelled(error: DatabaseError) {
-
-                        }
-                        //  alimentosRVAdapter.notifyDataSetChanged()
+                        alimentosRVAdapter.notifyDataSetChanged()
                     }
-                    myalimentosRef.addValueEventListener(postListener_comida)
+
+                    override fun onCancelled(error: DatabaseError) {
+
+                    }
+                    //  alimentosRVAdapter.notifyDataSetChanged()
                 }
-                i += 1
+                myalimentosRef.addValueEventListener(postListener_comida)
             }
-       // }
-    }
-
-
-
-
-
-    private fun gotoMeals() {
-        val postListener = object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                for (dato: DataSnapshot in snapshot.children) {
-                    val deudorServer = dato.getValue(Alimento::class.java)
-                    deudorServer?.let { listAlimentos.add(it) }
-                }
-                alimentosRVAdapter.notifyDataSetChanged()
-
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-            }
-
+            i += 1
         }
+
+
+        // }
     }
 
+    override fun onItemClick(alimento: Alimento) {
+
+        Toast.makeText(context,alimento.id, Toast.LENGTH_SHORT).show()
     }
 
-    /*private fun cargarDesdeDatabase() {
-        val deudorDAO = MisDeudores.database.DeudorDAO()
-        listDeudores = deudorDAO.getDeudores()
+    /*private fun verificarFavs(lista : MutableList<Alimento>){
+        for (dato in lista){
+            if (){
+
+            }
+        }
+
     }*/
-
-
+}
