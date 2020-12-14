@@ -114,13 +114,13 @@ class DrawerActivity : AppCompatActivity() {
 
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_alimentos,
+                R.id.nav_alimentos_tab,
                 R.id.nav_dieta,
                 R.id.nav_imc,
                 R.id.restaurantes_google_Fragment,
                 R.id.nav_recetas,
-                R.id.nav_perfil,
-                R.id.nav_alimentos_tab
+                R.id.nav_perfil
+
             ), drawerLayout
         )
 
