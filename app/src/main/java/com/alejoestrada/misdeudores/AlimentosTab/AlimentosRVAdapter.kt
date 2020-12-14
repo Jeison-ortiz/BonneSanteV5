@@ -1,20 +1,13 @@
-package com.alejoestrada.misdeudores.Alimentos
+package com.alejoestrada.misdeudores.AlimentosTab
 
-import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.alejoestrada.misdeudores.R
-import com.alejoestrada.misdeudores.Recetas.ListaRecetasFragmentDirections
-import com.alejoestrada.misdeudores.Registro.RegistroActivity
-import com.alejoestrada.misdeudores.Registro.RegistroActivity.Companion.TAG
 import com.alejoestrada.misdeudores.data.Alimento
-import com.alejoestrada.misdeudores.data.server.Receta
 import com.alejoestrada.misdeudores.databinding.AlimentosItemBinding
+import com.squareup.picasso.Picasso
 
 class AlimentosRVAdapter(var alimentosList: ArrayList<Alimento>,val onItemClickListener: OnItemClickListener) : RecyclerView.Adapter<AlimentosRVAdapter.AlimentosViewHolder>() {
 
@@ -48,17 +41,17 @@ class AlimentosRVAdapter(var alimentosList: ArrayList<Alimento>,val onItemClickL
     // esta ereda de RecyclerView.ViewHolder
 
     class AlimentosViewHolder(itemView: View,
-                              var onItemClickListener: OnItemClickListener) :
-        RecyclerView.ViewHolder(itemView) { // el itemVIew los manda la clase externa
+                              var onItemClickListener: OnItemClickListener
+    ) : RecyclerView.ViewHolder(itemView) { // el itemVIew los manda la clase externa
         private val binding = AlimentosItemBinding.bind(itemView)
 
         fun bindAlimento(alimento: Alimento) {  // establece la información a mostrar
           // Picasso.get().load(deudor.foto).into(binding.fotoImageView)
-
+                Picasso.get().load(alimento.foto).into(binding.alimentoImageView)
                binding.nombreAlimentoTextView.text = alimento.id
                binding.caloriasTextView.text = alimento.calorias.toString()
 
-                binding.favImageButton.setOnClickListener{
+                binding.checkImageView.setOnClickListener{
                     onItemClickListener.onItemClick(alimento)
                }
 
