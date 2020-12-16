@@ -8,7 +8,11 @@
         android:id="@+id/nav_dieta"
         android:name="com.alejoestrada.misdeudores.Dieta.nav_dieta"
         android:label="@string/dieta"
-        tools:layout="@layout/fragment_dieta" />
+        tools:layout="@layout/fragment_dieta" >
+        <argument
+            android:name="diaSeleccion"
+            app:argType="string" />
+    </fragment>
     <!--<fragment
         android:id="@+id/nav_restaurante"
         android:name="com.alejoestrada.misdeudores.Restaurantes.nav_restaurantes"
@@ -90,6 +94,15 @@
         <argument
             android:name="TipoPerfil"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/dia_seleccionado"
+        android:name="com.alejoestrada.misdeudores.Dieta.dia_seleccionado"
+        android:label="fragment_dia_seleccionado"
+        tools:layout="@layout/fragment_dia_seleccionado" >
+        <action
+            android:id="@+id/action_dia_seleccionado_to_nav_dieta2"
+            app:destination="@id/nav_dieta" />
     </fragment>
 
 

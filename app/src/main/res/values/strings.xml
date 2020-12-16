@@ -123,6 +123,14 @@
     <string name="cena_comida">Cena</string>
     <string name="vacio" />
     <string name="guardar">Guardar</string>
+    <string name="plan_nutricion">Plan de Nutricion</string>
+    <string name="martes_semana">Martes</string>
+    <string name="miercoles_semana">Miercoles</string>
+    <string name="jueves_semana">Jueves</string>
+    <string name="viernes_semana">Viernes</string>
+    <string name="sabado_semana">Sabado</string>
+    <string name="domingo_semana">Domingo</string>
+    <string name="actualizar_dieta">Actualizar Dieta</string>
 
 
 </resources>

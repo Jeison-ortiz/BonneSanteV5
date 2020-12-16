@@ -10,7 +10,7 @@
             android:title="@string/alimentos" />
 
         <item
-            android:id="@+id/nav_dieta"
+            android:id="@+id/dia_seleccionado"
             android:icon="@drawable/ic_chart"
             android:title="@string/dieta" />
 
