@@ -3,12 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/nav_alimentos">
-    <fragment
-        android:id="@+id/nav_alimentos"
-        android:name="com.alejoestrada.misdeudores.Alimentos.nav_alimentos"
-        android:label="@string/alimentos"
-        tools:layout="@layout/fragment_alimentos" />
+    app:startDestination="@id/nav_alimentos_tab">
     <fragment
         android:id="@+id/nav_dieta"
         android:name="com.alejoestrada.misdeudores.Dieta.nav_dieta"

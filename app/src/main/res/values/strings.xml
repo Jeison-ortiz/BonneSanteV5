@@ -108,6 +108,19 @@
     <string name="Pasos">Pasos</string>
     <string name="instrucciones">INSTRUCCIONES</string>
     <string name="ingrediente">INGREDIENTES</string>
+    <string name="check">Check</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="domingo">D</string>
+    <string name="viernes">V</string>
+    <string name="sabado">S</string>
+    <string name="lunes_semana">Lunes</string>
+    <string name="dia">Dia</string>
+    <string name="desayuno_meal">Desayuno</string>
+    <string name="media_manana">Media Mañana</string>
+
+    <string name="almuerzo_comida">Almuerzo</string>
+    <string name="media_tarde">Media Tarde</string>
+    <string name="cena_comida">Cena</string>
 
 
 </resources>

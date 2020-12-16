@@ -5,7 +5,7 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_alimentos"
+            android:id="@+id/nav_alimentos_tab"
             android:icon="@drawable/comiendo"
             android:title="@string/alimentos" />
 
@@ -30,10 +30,7 @@
             android:id="@+id/nav_perfil"
             android:icon="@drawable/ic_menu_profile"
             android:title="@string/perfil_2" />
-        <item
-            android:id="@+id/nav_alimentos_tab"
-            android:icon="@drawable/comiendo"
-            android:title="@string/alimentos" />
+
         <!-- <item
             android:id="@+id/restaurantes_google_Fragment"
             android:icon="@drawable/ic_baseline_exit_to_app_24"
