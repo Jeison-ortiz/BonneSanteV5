@@ -28,7 +28,11 @@
         android:id="@+id/nav_perfil"
         android:name="com.alejoestrada.misdeudores.Perfil.nav_perfil"
         android:label="@string/perfil_2"
-        tools:layout="@layout/fragment_perfil" />
+        tools:layout="@layout/fragment_perfil" >
+        <action
+            android:id="@+id/action_nav_perfil_to_dialogEditFragment"
+            app:destination="@id/dialogEditFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_alimentos_tab"
         android:name="com.alejoestrada.misdeudores.AlimentosTab.nav_alimentos_tab"
@@ -60,7 +64,7 @@
     <fragment
         android:id="@+id/listaRecetasFragment"
         android:name="com.alejoestrada.misdeudores.Recetas.ListaRecetasFragment"
-        android:label="fragment_lista_recetas"
+        android:label="@string/Recetas"
         tools:layout="@layout/fragment_lista_recetas" >
         <argument
             android:name="tipoRecetas"
@@ -72,11 +76,20 @@
     <fragment
         android:id="@+id/ingredientesYPasosFragment"
         android:name="com.alejoestrada.misdeudores.Recetas.IngredientesYPasosFragment"
-        android:label="fragment_ingredientes_y_pasos"
+        android:label="Ingredientes e Instrucciones"
         tools:layout="@layout/fragment_ingredientes_y_pasos" >
         <argument
             android:name="IngredientesYpasos"
             app:argType="com.alejoestrada.misdeudores.data.server.Receta" />
+    </fragment>
+    <fragment
+        android:id="@+id/dialogEditFragment"
+        android:name="com.alejoestrada.misdeudores.Perfil.DialogEditFragment"
+        android:label="Cambiar datos"
+        tools:layout="@layout/fragment_dialog_edit" >
+        <argument
+            android:name="TipoPerfil"
+            app:argType="string" />
     </fragment>
 
 

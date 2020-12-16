@@ -3,10 +3,12 @@ package com.alejoestrada.misdeudores.Perfil
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.alejoestrada.misdeudores.Login.LogInActivity2
 import com.alejoestrada.misdeudores.R
 import com.alejoestrada.misdeudores.data.server.Usuario
@@ -19,10 +21,8 @@ import com.google.firebase.database.ValueEventListener
 import kotlinx.android.synthetic.main.fragment_perfil.*
 
 class nav_perfil : Fragment() {
-    val jeison = "el mejor"
     private lateinit var binding: FragmentPerfilBinding
 
-// jeison ortizs
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,7 +30,7 @@ class nav_perfil : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_perfil, container, false)
     }
-
+ // hola
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding = FragmentPerfilBinding.bind(view)
 
@@ -38,6 +38,26 @@ class nav_perfil : Fragment() {
             val intent = Intent(context, LogInActivity2::class.java)
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or FLAG_ACTIVITY_CLEAR_TASK)
             startActivity(intent)
+        }
+
+        binding.editNombreImageButton.setOnClickListener{
+            val action = nav_perfilDirections.actionNavPerfilToDialogEditFragment("name")
+            findNavController().navigate(action)
+        }
+
+        binding.editCorreoImageButton.setOnClickListener{
+            val action = nav_perfilDirections.actionNavPerfilToDialogEditFragment("correo")
+            findNavController().navigate(action)
+        }
+
+        binding.editTelefonoImageButton.setOnClickListener{
+            val action = nav_perfilDirections.actionNavPerfilToDialogEditFragment("telefono")
+            findNavController().navigate(action)
+        }
+
+        binding.editeditContrasenaImageButton.setOnClickListener{
+            val action = nav_perfilDirections.actionNavPerfilToDialogEditFragment("contrasena")
+            findNavController().navigate(action)
         }
 
         val user = FirebaseAuth.getInstance().currentUser
@@ -61,7 +81,22 @@ class nav_perfil : Fragment() {
             }
 
         })
+
+/*    editarFoto_imageView.setOnClickListener{
+         dispatchTakePictureIntent()
+     }*/
+
+
     }
+
+    /*    private fun dispatchTakePictureIntent() {
+          Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { TakePictureIntent ->
+              TakePictureIntent.resolveActivity(activity!!.packageManager)?.also {
+                  startActivityForResult(TakePictureIntent, REQUEST_IMAGE_CAPTURE)
+              }
+          }
+      }*/
+
 
     companion object
 }

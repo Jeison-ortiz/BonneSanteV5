@@ -26,8 +26,8 @@ class nav_recetas : Fragment() {
         binding = FragmentNavRecetasBinding.bind(view)
 
         desayuno_imageView.setOnClickListener {
-           val action = nav_recetasDirections.actionNavRecetasToListaRecetasFragment("desayunos")
-           findNavController().navigate(action)
+            val action = nav_recetasDirections.actionNavRecetasToListaRecetasFragment("desayunos")
+            findNavController().navigate(action)
         }
         almuerzo_imageView.setOnClickListener {
             val action = nav_recetasDirections.actionNavRecetasToListaRecetasFragment("comidas")

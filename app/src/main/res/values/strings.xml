@@ -121,6 +121,8 @@
     <string name="almuerzo_comida">Almuerzo</string>
     <string name="media_tarde">Media Tarde</string>
     <string name="cena_comida">Cena</string>
+    <string name="vacio" />
+    <string name="guardar">Guardar</string>
 
 
 </resources>

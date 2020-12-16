@@ -1,20 +1,20 @@
 package com.alejoestrada.misdeudores.Recetas
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.alejoestrada.misdeudores.R
 import com.alejoestrada.misdeudores.databinding.FragmentIngredientesYPasosBinding
 import com.squareup.picasso.Picasso
-import kotlinx.coroutines.flow.combine
 
 class IngredientesYPasosFragment : Fragment() {
 
     private lateinit var binding: FragmentIngredientesYPasosBinding
 
+    // nombre
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,18 +32,18 @@ class IngredientesYPasosFragment : Fragment() {
         Picasso.get().load(recetaDetalle.foto).into(binding.fotoRecetaDetalleImageView)
         binding.ingredientestextView.text = recetaDetalle.ingredientes
         binding.pasosTextView.text = recetaDetalle.preparacion
-       // val args: IngredientesYPasosFragment by navArgs()
+        // val args: IngredientesYPasosFragment by navArgs()
         //val recetaDetalle = args
     }
 
-  /*  override fun onViewCeated(view: View, savedInstanceState: Bundle?) {
-        binding = FragmentDetalleBinding.bind(view)
+    /*  override fun onViewCeated(view: View, savedInstanceState: Bundle?) {
+          binding = FragmentDetalleBinding.bind(view)
 
-        val args: DetalleFragmentArgs by navArgs()
-        val deudorDetalle = args.deudorSeleccionado
-        binding.nombreTextView.text = deudorDetalle.nombre
+          val args: DetalleFragmentArgs by navArgs()
+          val deudorDetalle = args.deudorSeleccionado
+          binding.nombreTextView.text = deudorDetalle.nombre
 
-    }*/
+      }*/
 
 
 
