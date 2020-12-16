@@ -18,6 +18,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import kotlinx.android.synthetic.main.fragment_alimentos_favs_lista.*
 
 class alimentosFavs : Fragment(), AlimentosFavoritosaAdapter.OnItemClickListener{
 
@@ -51,6 +52,11 @@ class alimentosFavs : Fragment(), AlimentosFavoritosaAdapter.OnItemClickListener
         binding.alimentosFavsRecyclerView.adapter = alimentosFavsAdapter
         cargarDesdeFirebase()
         alimentosFavsAdapter.notifyDataSetChanged()
+
+        actualizar_button.setOnClickListener {
+            cargarDesdeFirebase()
+            Toast.makeText(context, "Lista Actualizada", Toast.LENGTH_SHORT).show()
+        }
 
 
     }

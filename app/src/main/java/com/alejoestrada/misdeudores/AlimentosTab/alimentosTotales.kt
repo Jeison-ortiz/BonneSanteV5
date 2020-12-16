@@ -32,6 +32,7 @@ class  alimentosTotales : Fragment() , AlimentosRVAdapter.OnItemClickListener{
     val listMealMerienda = listOf("carbohidratos","frutas","lacteos","variado")
     val listOfListMeal = listOf(listMealAlmuerzo,listMealCena,listMealDesayuno,listMealMerienda)
     var lista : MutableList<String> = mutableListOf()
+    var listaAux : MutableList<String> = mutableListOf()
     private lateinit var alimentosRVAdapter: AlimentosRVAdapter
 
 
@@ -108,6 +109,7 @@ class  alimentosTotales : Fragment() , AlimentosRVAdapter.OnItemClickListener{
         val dietaRef = database2.getReference("dieta")
        // Toast.makeText(context,alimento.id, Toast.LENGTH_SHORT).show
 
+
         val postlistener = object : ValueEventListener {
 
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -115,7 +117,27 @@ class  alimentosTotales : Fragment() , AlimentosRVAdapter.OnItemClickListener{
 
                     val usuarioActual: Usuario? = data.getValue(Usuario::class.java)
                     if (usuarioActual?.id == user?.uid) {
-                        idDieta?.let { dietaRef.child(idDieta).child("Favoritos").child(alimento?.id.toString()).setValue(alimento) }
+                      //  if(listaAux.contains(alimento?.id.toString())) {
+                          //  Toast.makeText(context, "El alimento ya esta agregado en la lista de favoritos",
+                            //    Toast.LENGTH_SHORT).show()
+
+                       // }else{
+                            val chilUpdates = HashMap<String, Any>()
+                            idDieta?.let {
+                                dietaRef.child(idDieta).child("Favoritos")
+                                    .child(alimento?.id.toString()).setValue(alimento)
+                            }
+                           /* chilUpdates["estado"] = true
+                            idDieta?.let {
+                                dietaRef.child(idDieta).child("Favoritos")
+                                    .child(alimento?.id.toString()).updateChildren(chilUpdates)
+                            }*/
+
+                            Toast.makeText(context, "Agregado!!!", Toast.LENGTH_SHORT).show()
+
+                       // }
+
+                        //listaAux.add(alimento?.id.toString())
                     }
                 }
 

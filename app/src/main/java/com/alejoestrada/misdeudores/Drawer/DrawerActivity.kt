@@ -79,8 +79,8 @@ class DrawerActivity : AppCompatActivity() {
         val navigationView =
             findViewById<View>(R.id.nav_view) as NavigationView
         val header = navigationView.getHeaderView(0)
-        val name: TextView = header.findViewById(R.id.name_textview)
-        val email: TextView = header.findViewById(R.id.correo_drawer)
+        val name: TextView = header.findViewById(R.id.nombre_header)
+        val email: TextView = header.findViewById(R.id.correo_header)
 
 
         val user = FirebaseAuth.getInstance().currentUser

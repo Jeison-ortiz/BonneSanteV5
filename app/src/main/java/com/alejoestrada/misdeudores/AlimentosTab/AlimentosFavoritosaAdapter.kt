@@ -40,7 +40,7 @@ class AlimentosFavoritosaAdapter( var alimentosList : ArrayList<Alimento>, val o
         fun bindAlimento(alimento: Alimento){
             Picasso.get().load(alimento.foto).into(binding.imageView3)
             binding.nombreAlimentoTextView4.text= alimento.id
-            binding.caloriasTextView4.text = alimento.calorias.toString()
+            binding.caloriasTextView4.text = alimento.calorias.toString() + " Cal"
 
             binding.checkImageView3.setOnClickListener {
                 onItemClickListener.onItemClick(alimento,this.adapterPosition)

@@ -49,7 +49,7 @@ class AlimentosRVAdapter(var alimentosList: ArrayList<Alimento>,val onItemClickL
           // Picasso.get().load(deudor.foto).into(binding.fotoImageView)
                 Picasso.get().load(alimento.foto).into(binding.alimentoImageView)
                binding.nombreAlimentoTextView.text = alimento.id
-               binding.caloriasTextView.text = alimento.calorias.toString()
+               binding.caloriasTextView.text = alimento.calorias.toString() + " Cal"
 
                 binding.checkImageView.setOnClickListener{
                     onItemClickListener.onItemClick(alimento)
