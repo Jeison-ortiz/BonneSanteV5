@@ -4,12 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
 import android.widget.SeekBar
-import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.alejoestrada.misdeudores.R
 import com.alejoestrada.misdeudores.data.server.Usuario
 import com.alejoestrada.misdeudores.databinding.FragmentIMCBinding
@@ -18,7 +14,6 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.fragment_i_m_c.*
 import java.util.*
 
@@ -28,7 +23,7 @@ class nav_imc : Fragment() {
     private lateinit var peso: String
     private lateinit var altura: String
     private lateinit var idDieta: String
-
+    // hola
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,12 +35,9 @@ class nav_imc : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding = FragmentIMCBinding.bind(view)
-
-        val user = FirebaseAuth.getInstance().currentUser
-        val database = FirebaseDatabase.getInstance()
-        val dietaRef = database.getReference("dieta")
         var pesoNumber = 1.0
         var alturaNumber = 1.0
+
 
         //barraPeso = R.id.peso_seekBar as SeekBar
 
@@ -53,7 +45,7 @@ class nav_imc : Fragment() {
 
         peso_seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
-               valuePeso_textView.text = p1.toString() + " Kg"
+                valuePeso_textView.text = p1.toString() + " Kg"
                 pesoNumber = p1.toDouble()
 
             }
@@ -73,6 +65,9 @@ class nav_imc : Fragment() {
 
         })
 
+        val user = FirebaseAuth.getInstance().currentUser
+        val database = FirebaseDatabase.getInstance()
+        val dietaRef = database.getReference("dieta")
 
         binding.imcImageButton.setOnClickListener {
             var rtaImc = pesoNumber/((alturaNumber/100)*(alturaNumber/100))
@@ -80,9 +75,9 @@ class nav_imc : Fragment() {
             imc_imageButton.isEnabled = false
             peso = binding.valuePesoTextView.text.toString()
             altura = binding.valueAlturaTextView.text.toString()
+
             idDieta = user?.uid.toString()
             val postlistener = object : ValueEventListener {
-
                 override fun onDataChange(snapshot: DataSnapshot) {
                     for (data: DataSnapshot in snapshot.children) {
 

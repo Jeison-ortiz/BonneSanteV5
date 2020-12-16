@@ -108,6 +108,8 @@
     <string name="Pasos">Pasos</string>
     <string name="instrucciones">INSTRUCCIONES</string>
     <string name="ingrediente">INGREDIENTES</string>
+    <string name="vacio" />
+    <string name="guardar">Guardar</string>
 
 
 </resources>
