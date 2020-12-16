@@ -79,8 +79,8 @@ class DrawerActivity : AppCompatActivity() {
         val navigationView =
             findViewById<View>(R.id.nav_view) as NavigationView
         val header = navigationView.getHeaderView(0)
-        val name: TextView = header.findViewById(R.id.name_textview)
-        val email: TextView = header.findViewById(R.id.correo_drawer)
+        val name: TextView = header.findViewById(R.id.nombre_header)
+        val email: TextView = header.findViewById(R.id.correo_header)
 
 
         val user = FirebaseAuth.getInstance().currentUser
@@ -114,13 +114,13 @@ class DrawerActivity : AppCompatActivity() {
 
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_alimentos,
+                R.id.nav_alimentos_tab,
                 R.id.nav_dieta,
                 R.id.nav_imc,
                 R.id.restaurantes_google_Fragment,
                 R.id.nav_recetas,
-                R.id.nav_perfil,
-                R.id.nav_alimentos_tab
+                R.id.nav_perfil
+
             ), drawerLayout
         )
 

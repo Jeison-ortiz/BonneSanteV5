@@ -81,13 +81,13 @@
     <string name="peso_imc">Weight:</string>
     <string name="calcular">Measure</string>
     <string name="olvide_contra">Forgot PassWord</string>
-    <string name="vegan">Vegano</string>
-    <string name="vegetariano">Vegetariano</string>
-    <string name="variado">Variado</string>
-    <string name="restaurantes_variados">Restaurantes Variados</string>
-    <string name="restaurantes_vegano">Restaurantes Veganos</string>
-    <string name="restaurantes_vegetarianos">Restaurantes Vegetarianos</string>
-    <string name="regresar">Regresar</string>
+    <string name="vegan">Vegan</string>
+    <string name="vegetariano">Vegetarian</string>
+    <string name="variado">Varied</string>
+    <string name="restaurantes_variados">Flexible Restaurant</string>
+    <string name="restaurantes_vegano">Vegan Restaurant</string>
+    <string name="restaurantes_vegetarianos">Vegetarian Restaurant</string>
+    <string name="regresar">Get Back</string>
     <string name="recetas_text_nuevo">"Aqui van las recetas "</string>
     <string name="flexibles">Varied</string>
     <string name="vegetarianos">Vegetarians</string>
@@ -95,11 +95,23 @@
 
 
 
-    <string name="correp">Correo</string>
-    <string name="desayuno">Desayunos</string>
-    <string name="almuerzo">Almuerzos</string>
-    <string name="cena">Cenas</string>
-    <string name="ensalada">Ensaladas</string>
+    <string name="correp">Email</string>
+    <string name="desayuno">Breakfast</string>
+    <string name="almuerzo">Lunch</string>
+    <string name="cena">Dinner</string>
+    <string name="ensalada">Salads</string>
+    <string name="check">Check</string>
+    <string name="actualizar">Update</string>
+    <string name="domingo">D</string>
+    <string name="viernes">V</string>
+    <string name="sabado">S</string>
+    <string name="lunes_semana">Lunes</string>
+    <string name="dia">Dia</string>
+    <string name="desayuno_meal">Desayuno</string>
+    <string name="media_manana">Media Mañana</string>
+    <string name="almuerzo_comida">Almuerzo</string>
+    <string name="media_tarde">Media Tarde</string>
+    <string name="cena_comida">Cena</string>
 
 
 </resources>

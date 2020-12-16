@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -41,6 +42,7 @@ class nav_restaurantes : Fragment() {
         binding.restaurantesRecyclerView.adapter = restaurantesRVAdapter
         cargarDesdeFarebase()
         restaurantesRVAdapter.notifyDataSetChanged() // se hace para notificar que cambiaron los datos porque se envio una lista vacia
+
     }
 
     private fun cargarDesdeFarebase() {

@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
-import com.alejoestrada.misdeudores.MyPagerAdapter
 import com.alejoestrada.misdeudores.R
 import com.google.android.material.tabs.TabLayout
 
